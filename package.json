@@ -1,0 +1,15 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.31.2"
+  },
+  "scripts": {
+    "chrome-tfl": "playwright test --headed --project=run-on-chrome",
+    "firefox-tfl": "playwright test --headed --project=run-on-firefox",
+    "webkit-tfl": "playwright test --headed --project=run-on-webkit",
+    "show-report": "npx playwright show-report"
+  }
+}
