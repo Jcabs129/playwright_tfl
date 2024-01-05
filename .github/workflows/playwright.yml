@@ -22,9 +22,10 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --immutable
+        working-directory: ./playwright_tfl
 
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+      # - name: Install Playwright Browsers
+      #   run: npx playwright install --with-deps
 
       - name: Run Playwright tests
         run: npx playwright test chromium src/tests/tfl.spec.ts
