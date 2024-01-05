@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       domain:
-        default: https://tfl.gov.uk
+        default: https://www.tfl.gov.uk
         description: Domain endpoint to run tests against
         required: true
         type: string
