@@ -16,12 +16,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Setup Node 🏗️
+        uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies
         run: yarn install --immutable
+
+      - name: Cache playwright binaries
+        uses: actions/cache@v3.2.3
+        id: playwright-cache
+        with:
+          path: |
+            ~/.cache/ms-playwright
+          key: cache-playwright-linux-1.19.2
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
