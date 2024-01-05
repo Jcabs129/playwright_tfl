@@ -6,7 +6,7 @@ on:
     inputs:
       domain:
         default: https://tfl.gov.uk
-        description: DOmain endpoint to run tests against
+        description: Domain endpoint to run tests against
         required: false
         type: string
 
@@ -22,7 +22,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --immutable
-        working-directory: /playwright_tfl
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
