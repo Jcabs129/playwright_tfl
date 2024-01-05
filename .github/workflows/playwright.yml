@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --immutable
-        working-directory: ./playwright_tfl
+        working-directory: /playwright_tfl
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
