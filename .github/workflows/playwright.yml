@@ -7,7 +7,7 @@ on:
       domain:
         default: https://tfl.gov.uk
         description: Domain endpoint to run tests against
-        required: false
+        required: true
         type: string
 
 jobs:
