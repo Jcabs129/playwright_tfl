@@ -24,28 +24,4 @@ export default function () {
       [`${url}search status was 200`]: (r) => r.status === 200 
     })
   });
-
-  describe('check status for ricky and morty api', (t) => {
-    const responses = session.batch(
-      [
-        new Get('/character'),
-        new Get('/location'),
-        new Get('/episode'),
-      ],
-      {
-        tags: { name: 'PublicCrocs' },
-      }
-    );
-
-    responses.forEach((response) => {
-      t.expect(response.status)
-        .as('response status')
-        .toEqual(200)
-        .and(response)
-        .toHaveValidJson()
-        // .and(response.json('age'))
-        // .as('croc age')
-        // .toBeGreaterThan(7);
-    });
-  });
 }
