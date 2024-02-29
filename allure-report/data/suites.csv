@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Feb 29 12:21:40 GMT 2024","Thu Feb 29 12:21:43 GMT 2024","3469","run-on-chrome","Test the tfl website","Testing the TFL website","","","Validate the list of headings on /maps page",""
+"passed","Thu Feb 29 12:21:14 GMT 2024","Thu Feb 29 12:21:26 GMT 2024","11952","run-on-chrome","Test the tfl website","Testing the TFL website","","","Plan my Jouurney",""
+"passed","Thu Feb 29 12:21:26 GMT 2024","Thu Feb 29 12:21:35 GMT 2024","9045","run-on-chrome","Test the tfl website","Testing the TFL website","","","Plan Journey - error field validation",""
+"passed","Thu Feb 29 12:21:35 GMT 2024","Thu Feb 29 12:21:40 GMT 2024","5312","run-on-chrome","Test the tfl website","Testing the TFL website","","","Plan Journey error page validation",""

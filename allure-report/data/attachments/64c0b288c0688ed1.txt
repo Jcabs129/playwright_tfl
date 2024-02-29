@@ -1,0 +1,1 @@
+//div[@class='text-link']//h2[text()="Oyster Ticket Stop map"]

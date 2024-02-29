@@ -1,16 +1,19 @@
 import test from "../helpers/base.page"
+import { allure } from "allure-playwright"
 
 const journeyFrom = "Arsenal"
 const journeyTo = "Greenpark"
 
 test.describe("Testing the TFL website", () => {
   test.beforeEach(async ({ page, transportForLondon }) => {
+    await allure.suite("Allure test - TFL website");
+
     await page.goto('/');
     await transportForLondon.handleCookiePopUp();
     await transportForLondon.waitForHeader();
   });
 
-  test('Plan my Jouurney', async ({ page, transportForLondon }) => {
+  test('Plan my Jouurney', async ({ transportForLondon }) => {
     const validateJourneyFrom = "Arsenal Underground Station"
     const validateJourneyTo = "Green Park Underground Station"
 
@@ -21,7 +24,7 @@ test.describe("Testing the TFL website", () => {
     await transportForLondon.validateResultsFromAndTo(validateJourneyFrom, validateJourneyTo);
   });
 
-  test('Plan Journey - error field validation', async ({ page, transportForLondon }) => {
+  test('Plan Journey - error field validation', async ({ transportForLondon }) => {
     const fieldErrorMsg = "The To field is required."
 
     await transportForLondon.planMyJourneyFrom(journeyFrom);
@@ -29,7 +32,7 @@ test.describe("Testing the TFL website", () => {
     await transportForLondon.fieldValidationError(fieldErrorMsg);
   });
 
-  test('Plan Journey error page validation', async ({ page, transportForLondon }) => {
+  test('Plan Journey error page validation', async ({ transportForLondon }) => {
     const randomCharOne = "aaaaaaaa"
     const randomCharTwo = "zzzzzzzz"
     const errorMsg = "Sorry, we can't find a journey matching your criteria"
