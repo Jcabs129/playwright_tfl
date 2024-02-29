@@ -1,10 +1,13 @@
 import test from "../helpers/base.page"
+import { allure } from "allure-playwright"
 
 const journeyFrom = "Arsenal"
 const journeyTo = "Greenpark"
 
 test.describe("Testing the TFL website", () => {
   test.beforeEach(async ({ page, transportForLondon }) => {
+    await allure.suite("Allure test - TFL website");
+
     await page.goto('/');
     await transportForLondon.handleCookiePopUp();
     await transportForLondon.waitForHeader();

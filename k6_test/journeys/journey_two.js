@@ -26,6 +26,7 @@ export default function () {
         .as('response status')
         .toEqual(200)
         .and(response)
+        
         .toHaveValidJson()
         // .and(response.json('age'))
         // .as('croc age')

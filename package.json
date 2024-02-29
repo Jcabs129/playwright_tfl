@@ -4,12 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.31.2"
+    "@playwright/test": "^1.42.0",
+    "allure-playwright": "^2.13.0"
   },
   "scripts": {
     "chrome-tfl": "playwright test --headed --project=run-on-chrome",
     "firefox-tfl": "playwright test --headed --project=run-on-firefox",
     "webkit-tfl": "playwright test --headed --project=run-on-webkit",
+    "chrome-tfl-headless": "playwright test --project=run-on-chrome",
     "show-report": "npx playwright show-report"
   }
 }
